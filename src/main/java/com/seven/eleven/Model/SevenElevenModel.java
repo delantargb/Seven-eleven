@@ -2,6 +2,7 @@ package com.seven.eleven.Model;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +13,6 @@ import javax.validation.constraints.Pattern;
 /**
  * Created by JPMPC-B210 on 1/6/2017.
  */
-
 @Entity
 public class SevenElevenModel {
 
@@ -34,6 +34,8 @@ public class SevenElevenModel {
     private String DOBMonth;
     private String DOBDay;
     private String DOBYear;
+
+    @NotEmpty(message = "Mobile number must not be empty")
     private String gender;
 
     public String getName() {
@@ -48,19 +50,15 @@ public class SevenElevenModel {
     public int getId() {
         return id;
     }
-
     public String getDOBMonth() {
         return DOBMonth;
     }
-
     public String getDOBDay() {
         return DOBDay;
     }
-
     public String getDOBYear() {
         return DOBYear;
     }
-
     public String getGender() {
         return gender;
     }
@@ -77,19 +75,15 @@ public class SevenElevenModel {
     public void setId(int id) {
         this.id = id;
     }
-
     public void setDOBMonth(String DOBMonth) {
         this.DOBMonth = DOBMonth;
     }
-
     public void setDOBDay(String DOBDay) {
         this.DOBDay = DOBDay;
     }
-
     public void setDOBYear(String DOBYear) {
         this.DOBYear = DOBYear;
     }
-
     public void setGender(String gender) {
         this.gender = gender;
     }

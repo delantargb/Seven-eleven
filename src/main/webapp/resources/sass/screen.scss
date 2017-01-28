@@ -7,22 +7,6 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
 $topSpace:90px;
 
-.has-error{
-  border-color: #ff7474;
-}
-.error-msg{
-  font-size: 15px;
-  color: #ff706f;
-  font-weight: bold;
-  font-style: italic;
-  margin-left: 170px;
-  width: 60%;
-}
-
-.has-error{
-  background-color: red;
-}
-
   #mobileTopSpace {
     background-color: darkgrey;
     height: $topSpace;
@@ -157,10 +141,10 @@ h1{
 
 .textarea-field{
   height: 50px;
-  width: 60%;
   background-color: #e0e0e0;
   border-color: transparent;
   font-size: 17px;
+  border-radius: 5px;
 }
 
 .textarea-field-month{
@@ -427,6 +411,19 @@ div{
   margin: 1px 1px 1px 347px;
   color: red;
 }
+.has-error{
+  border-color: #ff7474;
+}
+.error-msg{
+  font-size: 15px;
+  color: #ff706f;
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 170px;
+  width: 60%;
+}
+
+
 
 /*--------------------------desktop max-----------------------*/
 @media only screen and (max-width: 1900px){
