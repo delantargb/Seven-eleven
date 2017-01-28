@@ -35,8 +35,11 @@ public class SevenElevenModel {
     private String DOBDay;
     private String DOBYear;
 
-    @NotEmpty(message = "Mobile number must not be empty")
+    @NotEmpty(message = "Please select your Gender")
     private String gender;
+
+    @NotEmpty(message = "Please Agree on our terms")
+    private String agreement;
 
     public String getName() {
         return name;
@@ -62,6 +65,9 @@ public class SevenElevenModel {
     public String getGender() {
         return gender;
     }
+    public String getAgreement() {
+        return agreement;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -86,5 +92,8 @@ public class SevenElevenModel {
     }
     public void setGender(String gender) {
         this.gender = gender;
+    }
+    public void setAgreement(String agreement) {
+        this.agreement = agreement;
     }
 }

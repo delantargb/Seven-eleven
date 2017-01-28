@@ -1,8 +1,24 @@
+/*searcBar*/
+$("#searchBar").blur(function () {
+    if (this.value == '') {this.value = "Search...";}
+});
+$("#searchBar").focus(function () {
+        if (this.value == "Search...") {this.value = '';}
+    });
+
+
+/*checkbox*/
+$("#terms").change(function() {
+    if(this.checked) {
+        $("#terms").val(true);
+    }else{
+        $("#terms").val();
+    }
+});
+/*SubmitForm Function*/
 $("#submit").click (function (event) {
     event.preventDefault();
-
     $.ajax({
-
         url: "/thankyou",
         data: $("#signupForm").serialize(),
         method: "POST",
@@ -16,14 +32,16 @@ $("#submit").click (function (event) {
                 alertify.success("You have successfully Registered");
                 $("#sec1").html("<h1>Thank You!</h1>"+response.name);
             } else {
-                $(".has-error").removeClass("has-error");
-                $(".error-msg").remove();
-                //$("#errorMsg").remove();
+                {
+                    $(".has-error").removeClass("has-error");
+                    $(".error-msg").remove();
+                    //$("#errorMsg").remove();
+                    }
                 $.each(response, function (a, b) {
-                    $("#"+a).hide().fadeIn().addClass("has-error")
-                    $("#"+a).after("<p id=error-"+a+" class='error-msg'>*"+b+"</p>");
+                        $("#"+a).hide().fadeIn().addClass("has-error").after("<p id=error-"+a+" class='error-msg'>*"+b+"</p>");
+
                 });
-                }
+            }
         },
     })
 })
