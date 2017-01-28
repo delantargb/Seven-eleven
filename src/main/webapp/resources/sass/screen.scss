@@ -1,0 +1,452 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+$topSpace:90px;
+
+.has-error{
+  border-color: #ff7474;
+}
+.error-msg{
+  font-size: 15px;
+  color: #ff706f;
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 170px;
+  width: 60%;
+}
+
+.has-error{
+  background-color: red;
+}
+
+  #mobileTopSpace {
+    background-color: darkgrey;
+    height: $topSpace;
+    display: block;
+    #menuIcon {
+      float: left;
+      padding: 10px;
+      div {
+        width: 50px;
+        height: 9px;
+        background-color: white;
+        margin: 9px 0;
+      }
+    }
+    #searchBar{
+      float: right;
+    }
+    }
+
+
+/*footer SASS variables*/
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@mixin nav2_def{
+  display: inline-block;
+  font: 30px 'PT Sans', sans-serif;
+  text-align: left;
+  color: white;
+  left: 0;
+  padding: 30px 5% 30px 5%;
+}
+
+@mixin nav2_line{
+  text-align: left;
+  font-size: 25px;
+  list-style: none;
+  color: white;
+}
+
+body {
+  display: block;
+  p{
+    &#paraBold {
+      margin: auto;
+      text-align: center;
+      font: bold 35px 'PT Sans', sans-serif;
+      width: 70%;
+    }
+    &#paraRegular {
+      margin: auto;
+      text-align: center;
+      font: 25px 'PT Sans', sans-serif;
+      width: 70%;
+      padding: 15px 0 50px 0;
+    }
+  }
+}
+#header_bg {
+  margin-top: 50px;
+  text-align: center;
+  background: url("../img/header_bg.png") repeat-x right top;
+}
+#logo_bg {
+  background-color: #ffffff;
+  padding: 0px 20px 0px 20px;
+}
+.clearfix {
+  overflow: auto;
+  clear: both;
+}
+nav{
+  &#nav1{
+    margin: 30px auto;
+    border: 3px solid rgb(12, 108, 67);
+    width: 1190px;
+    text-align: center;
+    ul{
+      li{
+        display:inline-block;
+        &:hover{
+          background: url("../img/link_hover.png") no-repeat center bottom;
+        }
+        a {
+          text-decoration: none;
+          color: rgb(12, 108, 67);
+          font: 30px 'PT Sans', sans-serif;
+          display: block;
+          padding: 20px 60px 20px 60px;
+        }
+      }
+    }
+  }
+  &#nav2 {
+    @include nav2_def;
+    ul {
+      padding: 30px 60px 0 60px;
+      display:inline-block;
+      li {
+        &.up{
+          padding-top: 20px;
+        }
+        &.li2 {
+          @include nav2_line;
+          a {
+            &.link_nav2 {
+              color: white;
+              text-decoration: none;
+              &:visited {
+                color: white;
+              }
+              &:hover {
+                text-shadow: 2px 2px 10px #ffffff;
+              }
+              &:active {
+                color: white;
+              }}}}}}}}
+section {
+  &#sec1 {
+    width: 540px;
+    margin: auto;
+    background-color: #ffffff;
+  }
+  img {
+    float: left;
+    margin: -210px 0 0 -190px;
+  }
+}
+h1{
+  margin-bottom: 20px;
+  font: bold 30px 'PT Sans', sans-serif;
+  color: #ff0005;
+}
+
+.textarea-field{
+  height: 50px;
+  width: 60%;
+  background-color: #e0e0e0;
+  border-color: transparent;
+  font-size: 17px;
+}
+
+.textarea-field-month{
+  height: 30px;
+  width: 23%;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  border-color: transparent;
+  font-size: 17px;
+  margin:5px;
+}
+
+.textarea-field-day{
+  height: 30px;
+  width: 16%;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  border-color: transparent;
+  font-size: 17px;
+  margin:5px;
+}
+
+.textarea-field-year{
+  height: 30px;
+  width: 16%;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  border-color: transparent;
+  font-size: 17px;
+  margin: -5px 5px -5px 5px;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select select {
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px 5px;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  background: #e6e6e6;
+}
+
+.select__arrow {
+  position: absolute;
+  width: 0;
+  height: 20px;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 7px 0 7px;
+  border-color: #ff5100 transparent transparent transparent;
+}
+
+div {
+  &#form-style-2 {
+    font: 20px 'PT Sans', sans-serif;
+    margin: auto;
+    max-width: 500px;
+    padding: 20px 12px 10px 20px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px;
+    -moz-box-shadow: 0px;
+    box-shadow: 0px 0px 20px 1px #5c5c5c;
+    label {
+      &.labelDown {
+        display: block;
+        margin: 0px 0px 15px 0px;
+      }
+      &.labelSide {
+        display: inline;
+        margin: 0px 0px 15px 0px;
+      }
+      &.paraSmall {
+        margin-left: 50px;
+        text-align: left;
+        display: block;
+        font: 15px 'PT Sans', sans-serif;
+      }
+      span {
+        width: 150px;
+        display: inline-block;
+        padding-right: 5px;
+        text-align: right;
+        &#sp1 {
+          width: 110px;
+          display: inline-block;
+          text-align: right;
+        }
+        &#sp2 {
+          width: 300px;
+          display: inline-block;
+          text-align: left;
+        }
+        &#sp3 {
+          width: 110px;
+          display: inline-block;
+          text-align: right;
+        }
+        &#sp4 {
+          width: 150px;
+          display: inline;
+          text-align: left;
+        }
+        &#sp4 {
+          width: 150px;
+          display: inline;
+          text-align: left;
+        }
+        &#arrYear {
+          width: 0;
+          height: 0;
+          padding: 0;
+          top: 16px;
+          right: 32px;
+        }
+        &#arrMonth {
+          width: 0;
+          height: 0;
+          padding: 0;
+          top: 16px;
+          right: 127px;
+        }
+        &#arrDay {
+          width: 0;
+          height: 0;
+          padding: 0;
+          top: 16px;
+          right: 223px;
+        }
+        &#spGender {
+          width: 150px;
+          display: inline-block;
+          text-align: right;
+        }
+        &#control-group {
+          width: 300px;
+          display: inline-block;
+          text-align: left;
+        }
+      }
+      input {
+        display: inline;
+        margin: 5px 10px;
+        width: 60%;
+      }
+    }
+    input[type=checkbox]{
+      width: 20%;
+      height: 20px;
+      background-color: #e0e0e0;
+      border-color: transparent;
+    }
+
+    input[type=submit],
+    input[type=button] {
+      background: #ef2b2f;
+      width: 40%;
+      height: 50px;
+      float: right;
+      border-radius: 5px;
+      font: 25px 'PT Sans', sans-serif;
+      color: white;
+      margin-right: 33px;
+      border-color: transparent;
+    }
+    input[type=submit]:hover,
+    input[type=button]:hover {
+      background: #EA7B00;
+      color: #fff;
+    }
+  }
+}
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+}
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+.control input:checked ~ .control__indicator {
+  background: #e0e0e0;
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #e0e0e0;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.control--checkbox input:disabled ~ .control__indicator:after {
+  border-color: #7b7b7b;
+}
+.control--radio .control__indicator:after {
+  left: 6px;
+  top: 6px;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #ff4f00;
+}
+.control--radio input:disabled ~ .control__indicator:after {
+  background: #7b7b7b;
+}
+
+/*footer SASS codes*/
+footer {
+  background-color: #006B41;
+  margin: 130px auto 0 auto;
+  text-align: center;
+}
+
+p{
+    &.conversation{
+      border: 2px solid #279dff;
+      margin: 5px;
+      border-radius: 5px;
+      padding: 15px;
+      background-color: #fffff5;
+  }
+}
+div{
+  &#result{
+    padding: auto;
+    background: #72daff;
+  }
+}
+
+#myCanvas{
+}
+
+.error{
+  font-size: 12px;
+  margin: 1px 1px 1px 347px;
+  color: red;
+}
+
+/*--------------------------desktop max-----------------------*/
+@media only screen and (max-width: 1900px){
+  #mobileTopSpace{display: none}
+}
+
+/*!*--------------------------desktop min---------------------*!*/
+@media only screen and (max-width: 979px){
+  #mobileTopSpace{display: none}
+
+}
+/*!*--------------------------tablet--------------------------*!*/
+@media only screen and (max-width: 767px){
+  #nav1{display: none}
+  #mobileTopSpace{display: inherit}
+    }
+/*!*--------------------------mobile--------------------------*!*/
+@media only screen and (max-width: 480px){
+    #nav1{display: none}
+    #mobileTopSpace{display: inherit}
+        }
+
+

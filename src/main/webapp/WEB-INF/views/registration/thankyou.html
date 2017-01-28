@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thankyou</title>
+</head>
+<body>
+Thank you for registering <br>
+<span th:text="${param.name}"></span><br><br>
+<form action="/view">
+    <input type="submit" value="View all">
+</form>
+
+
+<!--
+e-mail: <span th:text="${param.email}"></span><br>
+Contact No.: <span th:text="${param.tel_no}"></span><br>
+Birth-Date: <span th:text="${param.DOBMonth}"></span>
+<span th:text="${param.DOBDay}"></span>
+<span th:text="${param.DOBYear}"></span><br>
+Gender: <span th:text="${param.gender}"></span>
+-->
+
+
+</body>
+</html>

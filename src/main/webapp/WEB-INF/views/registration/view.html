@@ -1,0 +1,116 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to 7 Eleven</title>
+    <link rel="stylesheet" href="../../../resources/stylesheets/screen.css" />
+    <link rel="stylesheet" href="../../../resources/stylesheets/alertify/alertify.css" />
+    <link rel="stylesheet" href="../../../resources/stylesheets/alertify/alertify.min.css" />
+    <link rel="stylesheet" href="../../../resources/stylesheets/alertify/themes/default.css" />
+    <link rel="icon" type="image/png" href="../../../resources/img/7-eleven-ico.png" />
+</head>
+<body>
+
+<!--clear local storage-->
+<!--clear local storage-->
+<div id="mobileTopSpace">
+    <div id="menuIcon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="searchBar" backgroundcolor="blue">
+        <label class="search">
+            <input type="text" class="searchBox" value="Search" />
+            <img src="">
+        </label>
+    </div>
+</div>
+
+<header id="header_bg">
+    <a href="registration.html">
+        <img id="logo_bg" src="../../../resources/img/logo.png" alt="Text/Photo" />
+    </a>
+</header>
+<nav id="nav1">
+    <ul class="clearfix">
+        <li><a id="Registration" href="/registration">Register</a></li>
+        <li><a href="/view" >View user list</a></li>
+        <li><a href="" >Dignissimos</a></li>
+        <li><a href="" >Blanditiis</a></li>
+    </ul>
+</nav>
+<p id="paraBold">Sed ut perspiciatis unde omnis iste natus error sit voluptatem sit amet tempor</p>
+<p id="paraRegular">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+<section id="sec1">
+    <h1>List of Registered Users</h1>
+    <!--<div id="form-style-2">-->
+        <!--Start of the view-->
+
+        <table border="1px" style="solid-color: black">
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <!--<td>email</td>
+                 <td>Contact</td>-->
+            </tr>
+            <tr th:each="data : ${view} ">
+                <td th:text="${data.id}">ID</td>
+                <td><a th:href="'/user/'+${data.id}" th:text="${data.name}" >name</a></td>
+                <!--<td th:text="${data.email}"></td>
+                <td th:text="${data.tel_no}"></td>-->
+            </tr>
+        </table>
+
+
+
+
+
+        <!--<img src="../../../resources/img/cards.png">-->
+    <!--</div>-->
+</section>
+
+<!--START OF FOOTER-->
+<footer>
+    <nav id="nav2" class="nav2">
+        <ul>SUSPENDISSE
+            <li class="li2 up"><a class="link_nav2"  href="#">Praesentium</a></li>
+            <li class="li2"><a class="link_nav2"  href="#">Voluptatum</a></li>
+            <li class="li2"><a class="link_nav2"  href="#">Dignissimos</a></li>
+            <li class="li2"><a class="link_nav2"  href="#">Blanditiis</a></li>
+        </ul>
+        <ul class="ul2">PORTA
+            <li class="li2 up"><a class="link_nav2" href="#">Mauris </a></li>
+            <li class="li2"><a class="link_nav2"  href="#">Suscipit </a></li>
+            <li class="li2"><a class="link_nav2" href="#">At ipsum</a></li>
+            <li class="li2"><a class="link_nav2" href="#">Vehicula</a></li>
+        </ul>
+        <ul class="ul2">FEUGIAT
+            <li class="li2 up"><a class="link_nav2" href="#">Pellentesque</a></li>
+            <li class="li2"><a class="link_nav2" href="#">Accumsan </a></li>
+            <li class="li2"><a class="link_nav2" href="#">Velit in urna</a></li>
+            <li class="li2"><a class="link_nav2" href="#">Faucibus </a></li>
+        </ul>
+        <ul class="ul2">PLACERAT
+            <li class="li2 up"><a class="link_nav2" href="#">Vitae</a></li>
+            <li class="li2"><a class="link_nav2" href="#">Convallis</a></li>
+            <li class="li2"><a class="link_nav2" href="#">Augue </a></li>
+            <li class="li2"><a class="link_nav2" href="#">Aliquam</a></li>
+        </ul>
+    </nav>
+</footer>
+<!--END OF FOOTER-->
+<script src="../../../resources/js/jquery-1.9.js"></script>
+<script src="../../../resources/js/alertifyjs/alertify.min.js"></script>
+<script src="../../../resources/js/alertifyjs/alertify.js"></script>
+<script src="../../../resources/js/ajax.js"></script>
+<!--<script src="../../../resources/js/app.js"></script>--><!--
+<script src="../../../resources/lib/jquery.js"></script>
+<script src="../../../resources/dist/jquery.validate.js"></script>-->
+</body>
+</html>
+
+
