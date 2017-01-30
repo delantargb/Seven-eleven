@@ -5,12 +5,16 @@
 
 @import "compass/reset";
 @import url('https://fonts.googleapis.com/css?family=PT+Sans');
+/*Variables*/
 $topSpace:90px;
 
+
+
+/*Styles*/
   #mobileTopSpace {
     background-color: darkgrey;
     height: $topSpace;
-    display: block;
+    display: none;
     #menuIcon {
       float: left;
       padding: 10px;
@@ -23,6 +27,7 @@ $topSpace:90px;
     }
     #searchBar{
       float: right;
+      width: 50%;
       margin-top: 26px;
       font: bold 26px 'PT Sans', sans-serif;
       color: #676767;
@@ -78,7 +83,7 @@ body {
   background-color: #ffffff;
   padding: 0px 20px 0px 20px;
 }
-.clearfix {
+.clearfix{
   overflow: auto;
   clear: both;
 }
@@ -86,7 +91,7 @@ nav{
   &#nav1{
     margin: 30px auto;
     border: 3px solid rgb(12, 108, 67);
-    width: 1190px;
+    width: 90%;
     text-align: center;
     ul{
       li{
@@ -172,7 +177,9 @@ h1{
   font-size: 17px;
   margin:5px;
 }
-
+#div-dob{
+  display: inline;
+}
 .textarea-field-year{
   height: 30px;
   width: 16%;
@@ -430,11 +437,6 @@ div{
   margin-left: 170px;
   width: 60%;
 }
-#mobileTopSpace {
-  display: none
-}
-
-
 /*!*--------------------------desktop min---------------------*!*/
 @media only screen and (max-width: 979px){
   #mobileTopSpace{display: none}
@@ -446,9 +448,97 @@ div{
   #mobileTopSpace{display: inherit}
     }
 /*!*--------------------------mobile--------------------------*!*/
-@media only screen and (max-width: 480px){
-    #nav1{display: none}
-    #mobileTopSpace{display: inherit}
-        }
-
+@media only screen and (max-width: 480px) {
+  #nav1 {
+    display: none
+  }
+  #mobileTopSpace {
+    display: inherit
+  }
+  div {
+    &#form-style-2 {
+      box-shadow: none;
+    }
+  }
+  div#form-style-2 label span {
+    width: 150px;
+    display: inline-block;
+    padding-right: 23px;
+    text-align:left;
+  }
+  body p#paraBold {
+    margin: auto;
+    text-align: left;
+    font: bold 35px 'PT Sans', sans-serif;
+    width: 80%;
+  }
+  body p#paraRegular {
+    margin: auto;
+    text-align: left;
+    font: 25px 'PT Sans', sans-serif;
+    width: 80%;
+    padding: 15px 0 50px 0;
+  }
+  div#form-style-2 label span#arrDay {
+     width: 0;
+     height: 0;
+     padding: 0;
+     top: 43px;
+     right: 287px;
+   }
+  div#form-style-2 label span#arrMonth {
+    width: 0;
+    height: 0;
+    padding: 0;
+    top: 43px;
+    right: 383px;
+  }
+  div#form-style-2 label span#arrYear {
+     width: 0;
+     height: 0;
+     padding: 0;
+     top: 43px;
+     right: 192px;
+   }
+  #div-dob {
+    display: block;
+  }
+  section img {
+    margin: 0px;
+  }
+  div#form-style-2 label span#control-group {
+     width: 300px;
+     display: block;
+     text-align: left;
+     position: absolute;
+     margin-left: 20px;
+   }
+  div#form-style-2 label span#gender {
+    width: 150px;
+    text-align: left;
+  }div#form-style-2 label.paraSmall {
+     text-align: left;
+     font: 15px 'PT Sans', sans-serif;
+   }div#form-style-2 label span#sp2 {
+      width: 60%;
+      margin-left: -27px;
+    }
+  div#form-style-2 label.paraSmall {
+    text-align: left;
+    font: 15px 'PT Sans', sans-serif;
+    margin-left: -70px;
+    margin-top: 33px;
+  }
+  div#form-style-2 input[type=submit], div#form-style-2 input[type=button] {
+    background: #ef2b2f;
+    width: 40%;
+    height: 50px;
+    float: left;
+    border-radius: 5px;
+    font: 25px 'PT Sans', sans-serif;
+    color: white;
+    margin-right: 33px;
+    border-color: transparent;
+  }
+}
 
