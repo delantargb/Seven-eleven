@@ -1,6 +1,7 @@
 package com.seven.eleven.Model;
 
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -19,7 +20,9 @@ public class SevenElevenModel {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+
     @NotBlank(message = "Name must not be empty")
+    @Length(min = 4,message = "At least 4 characters required")
     private String name;
 
     @NotBlank(message = "email must not be empty" )
